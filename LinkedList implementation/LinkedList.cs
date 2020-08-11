@@ -11,7 +11,7 @@ namespace LinkedList_implementation
         public void Add(User user)
         {
             Node newNode = new Node(user);
-            
+
             if (head == null)
             {
                 head = newNode;
@@ -35,5 +35,16 @@ namespace LinkedList_implementation
             }
         }
 
+        public bool IsEmpty () 
+        {
+            if (size == 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }

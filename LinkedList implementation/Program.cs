@@ -6,17 +6,21 @@ namespace LinkedList_implementation
     {
         static void Main(string[] args)
         {
-            User Lucas = new User(1, "Lucas");
-            User Marcos = new User(2, "Marcos");
-            User Pedro = new User(3, "Pedro");
+            //User Lucas = new User(1, "Lucas");
+            //User Marcos = new User(2, "Marcos");
+            //User Pedro = new User(3, "Pedro");
 
             LinkedList lista = new LinkedList();
 
-            lista.Add(Lucas);
-            lista.Add(Pedro);
-            lista.Add(Marcos);
+            //bool answer = lista.IsEmpty();
+            //Console.WriteLine(answer);
 
-            lista.showAll();
+            //lista.Add(Lucas);
+            //lista.Add(Pedro);
+            //lista.Add(Marcos);
+
+            //answer = lista.IsEmpty();
+            //Console.WriteLine(answer);
         }
     }
 
