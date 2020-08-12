@@ -46,5 +46,31 @@ namespace LinkedList_implementation
                 return false;
             }
         }
+
+        public bool remove (User user)
+        {
+            Node pastNode, currentNode;
+            pastNode = currentNode = head;
+
+            for (int i = 0; i < size; i++)
+            {
+                if (currentNode.value.name == user.name )
+                {
+                    if (currentNode == head)
+                    {
+                        head = head.next;
+                    }
+                    else
+                    {
+                        pastNode.next = currentNode.next;
+                    }
+                    size--;
+                    return true;
+                }
+                pastNode = currentNode;
+                currentNode = currentNode.next;
+            }
+            return false;
+        }
     }
 }
