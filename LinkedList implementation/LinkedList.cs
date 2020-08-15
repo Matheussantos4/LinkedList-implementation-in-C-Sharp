@@ -72,5 +72,29 @@ namespace LinkedList_implementation
             }
             return false;
         }
+
+        public void revert ()
+        {
+            Node pastNode, currentNode, nextNode;
+            pastNode = currentNode = head;
+
+            for (int i = 0; i < size; i++)
+            {
+                nextNode = currentNode.next;
+                if (currentNode == head)
+                { 
+                    currentNode.next = null;
+                }
+                else 
+                {
+                    currentNode.next = pastNode;
+                }
+                pastNode = currentNode;
+                currentNode = nextNode;
+            }
+            Node temp = head;
+            head = tail;
+            tail = temp;
+        }
     }
 }
