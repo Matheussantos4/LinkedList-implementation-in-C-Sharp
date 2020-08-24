@@ -63,6 +63,8 @@ namespace LinkedList_implementation
                     else
                     {
                         pastNode.next = currentNode.next;
+                        if (currentNode == tail)
+                            tail = pastNode;
                     }
                     size--;
                     return true;
@@ -95,6 +97,20 @@ namespace LinkedList_implementation
             Node temp = head;
             head = tail;
             tail = temp;
+        }
+
+        public string pop()
+        {
+            if (IsEmpty())
+            {
+                return "The list is empty";
+            }
+            else
+            {
+                Node lastNode = tail;
+                remove(tail.value);
+                return lastNode.value.name;
+            }
         }
     }
 }
